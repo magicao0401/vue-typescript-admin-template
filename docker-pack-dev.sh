@@ -15,7 +15,7 @@ if [ ! -n "$1" ];then
   VERSION=`date '+%Y%m%d%H%M%S'`
 fi
 
-ZIP_FILE="./docker/${APP_ENV}/dist.zip"
+ZIP_FILE="./dist.zip"
 
 if [ -f "$ZIP_FILE" ]; then 
 	rm "$ZIP_FILE";
@@ -25,7 +25,7 @@ fi
 npm install
 npm run build
 
-(cd dist && zip -r -q ../"$ZIP_FILE" * -x 'node_modules/*' '.*' '*.yml')
+(cd dist && zip -r -q ./"$ZIP_FILE" * -x 'node_modules/*' '.*' '*.yml')
 
 # 删除原有本地最新版本镜像
 # docker rmi "$DOCKER_NAME:latest"
