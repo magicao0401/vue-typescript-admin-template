@@ -4,8 +4,8 @@
 APP_ENV='dev'
 
 # 仓库及镜像定义
-DOCKER_NAME="webtourism-${APP_ENV}" # 需修改
-DOCKER_FILE="docker/Dockerfile"
+DOCKER_NAME="webadmin-${APP_ENV}" # 需修改
+DOCKER_FILE="./Dockerfile"
 REPO_DOMAIN="mcregistry.azurecr.cn"
 
 
