@@ -23,7 +23,7 @@ fi
 
 # 打包(需修改)
 npm install
-npm run build
+npm run build:prod
 
 (cd dist && zip -r -q ./"$ZIP_FILE" * -x 'node_modules/*' '.*' '*.yml')
 
